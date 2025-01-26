@@ -1,6 +1,4 @@
-import re
 
-import telebot
 
 text = ""
 

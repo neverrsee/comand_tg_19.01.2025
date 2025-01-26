@@ -1,6 +1,6 @@
-from telebot import types
 
-def links(message, bot):
+
+def links(message, bot, types):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton('Далее')
     btn2 = types.KeyboardButton('Ссылки')
@@ -9,7 +9,7 @@ def links(message, bot):
     bot.send_message(message.user.id, "Выбери кнопку!", reply_markup=markup)
 
 
-def check(message, bot):
+def check(message, bot, types):
     if message.text == 'Далее':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # создание новых кнопок
         btn1 = types.KeyboardButton('Бу, испугался?')
